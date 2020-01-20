@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TelaInicial : MonoBehaviour
 {
@@ -14,5 +15,10 @@ public class TelaInicial : MonoBehaviour
     void Update()
     {
         
+    }
+
+
+    public void ExitScene(){
+        SceneManager.LoadScene("SampleScene");
     }
 }

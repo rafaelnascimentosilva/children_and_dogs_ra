@@ -7,6 +7,7 @@ Confidential and Proprietary - Protected under copyright and other laws.
 ==============================================================================*/
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Vuforia;
 
 /// <summary>
@@ -102,6 +103,10 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
             // Enable canvas':
             foreach (var component in canvasComponents)
                 component.enabled = true;
+            //Adicionando SceneManager
+            SceneManager.LoadScene("Scene2");
+            Debug.Log("CHEGUEI AQUI");
+
         }
     }
 

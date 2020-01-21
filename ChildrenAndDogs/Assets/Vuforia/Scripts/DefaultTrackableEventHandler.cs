@@ -104,8 +104,16 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
             foreach (var component in canvasComponents)
                 component.enabled = true;
             //Adicionando SceneManager
-            SceneManager.LoadScene("Scene2");
-            Debug.Log("CHEGUEI AQUI");
+            if(mTrackableBehaviour.TrackableName == "child_01")
+            {
+             SceneManager.LoadScene("Scene2");
+            }
+            if (mTrackableBehaviour.TrackableName == "dog")
+            {
+                  SceneManager.LoadScene("Scene3");
+            }
+             Debug.Log("TARGET: "+mTrackableBehaviour.TrackableName);
+             Debug.Log("CHEGUEI AQUI");
 
         }
     }
